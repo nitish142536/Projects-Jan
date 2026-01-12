@@ -493,3 +493,326 @@ h2::after {
     font-size: 22px;
   }
 }
+
+/* =========================
+   Login Page – AgroCart
+========================= */
+
+.login-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f9fafb, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------- Left Info Panel ---------- */
+.login-info {
+  background: linear-gradient(135deg, #2e7d32, #1b5e20);
+  color: white;
+  padding: 50px;
+}
+
+.login-info h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.login-info p {
+  color: #d1fae5;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.login-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.login-info li {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+/* ---------- Login Card ---------- */
+.login-card {
+  padding: 50px 40px;
+}
+
+.login-card h3 {
+  font-size: 28px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.login-subtitle {
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+/* ---------- Form ---------- */
+.login-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
+}
+
+/* ---------- Options ---------- */
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.login-options a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-options a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Button ---------- */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #27672a;
+}
+
+/* ---------- Signup Text ---------- */
+.signup-text {
+  margin-top: 25px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.signup-text span {
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.signup-text span:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .login-container {
+    grid-template-columns: 1fr;
+  }
+
+  .login-info {
+    display: none;
+  }
+}
+/* =========================
+   Register Page – AgroCart
+========================= */
+
+.register-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f9fafb, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.register-container {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* Left Panel */
+.register-info {
+  background: linear-gradient(135deg, #2e7d32, #1b5e20);
+  color: white;
+  padding: 50px;
+}
+
+.register-info h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.register-info p {
+  color: #d1fae5;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.register-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.register-info li {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+/* Form Card */
+.register-card {
+  padding: 45px 40px;
+}
+
+.register-card h3 {
+  font-size: 28px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.register-subtitle {
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+/* Form Layout */
+.register-form .form-group {
+  margin-bottom: 18px;
+}
+
+.form-row {
+  gap: 15px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.register-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  transition: 0.3s;
+}
+
+.register-form input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
+}
+
+/* Button */
+.register-btn {
+  width: 100%;
+  padding: 13px;
+  margin-top: 10px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  background-color: #27672a;
+}
+
+/* Login Link */
+.login-text {
+  margin-top: 25px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.login-text a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .register-container {
+    grid-template-columns: 1fr;
+  }
+
+  .register-info {
+    display: none;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}
+.signup-text a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+
