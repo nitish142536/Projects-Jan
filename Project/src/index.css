@@ -1,0 +1,818 @@
+/* Fonts */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb;
+  color: #1f2937;
+}
+
+/* Primary and Accent colors */
+:root {
+  --primary: #2E7D32;
+  --accent: #FFB300;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 50px;
+  background-color: var(--primary);
+  color: white;
+  height: 50px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header nav a {
+  margin-right: 20px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.header nav a:hover {
+  color: var(--accent);
+}
+
+.header button {
+  background-color: var(--accent);
+  color: var(--primary);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.header button:hover {
+  background-color: #ffbf00;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px;
+  background-color: #f3f4f6;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-text h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.hero-text p {
+  margin-bottom: 30px;
+}
+
+.hero-text button {
+  padding: 10px 20px;
+  margin-right: 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-text .btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.hero-text .btn-primary:hover {
+  background-color: #27672a;
+}
+
+.hero-text .btn-secondary {
+  background-color: white;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.hero-text .btn-secondary:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 300px;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* TrustStats */
+.trust-stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 50px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+}
+
+.trust-stats div {
+  text-align: center;
+  margin: 10px;
+}
+
+.trust-stats div p {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+/* Product Categories */
+.categories {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.categories-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: var(--primary);
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 17px;
+}
+
+.category-card {
+  background-color: white;
+  padding: 25px 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.category-icon {
+  height: 90px;
+  background-color: var(--medium-gray);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.category-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--dark-gray);
+}
+.category-icon {
+  height: 90px;
+  width: 90px;
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 18px;
+  overflow: hidden;
+}
+
+.category-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* best for JPG */
+  border-radius: 12px;
+}
+
+/* Product Card */
+.product-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.product-card img {
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.product-card h4 {
+  margin: 10px 0 5px 0;
+  color: #1f2937;
+}
+
+.product-card p {
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.product-card button {
+  margin-top: auto;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background-color: #27672a;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary);
+  color: white;
+  padding: 30px 20px;
+}
+
+.footer .footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+}
+
+.footer h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  margin-bottom: 5px;
+  transition: 0.3s;
+}
+
+.footer a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  background-color: #27672a;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 30px;
+  }
+  .hero-text h2 {
+    font-size: 32px;
+  }
+  .trust-stats {
+    flex-direction: column;
+  }
+}
+/* =========================
+   Contact Page – Modern UI
+========================= */
+
+.bg-gray-50 {
+  background: linear-gradient(180deg, #f9fafb, #ffffff);
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+/* ---------- Header Section ---------- */
+.bg-green-700 {
+  background: linear-gradient(135deg, #2e7d32, #1b5e20);
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-green-100 {
+  color: #d1fae5;
+}
+
+.py-12 {
+  padding: 3rem 0;
+}
+
+.max-w-7xl {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+h1 {
+  letter-spacing: -0.5px;
+}
+
+/* ---------- Content Layout ---------- */
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: 1fr;
+}
+
+.md\:grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gap-10 {
+  gap: 2.5rem;
+}
+
+/* ---------- Section Titles ---------- */
+h2 {
+  position: relative;
+  padding-bottom: 8px;
+}
+
+h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #2e7d32;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 2px;
+}
+
+/* ---------- Contact Info Cards ---------- */
+.space-y-5 > * + * {
+  margin-top: 1.25rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.text-green-600 {
+  color: #2e7d32;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+/* Card feel */
+.flex.items-center {
+  background-color: #ffffff;
+  padding: 16px 18px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flex.items-center:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Text */
+.font-medium {
+  font-weight: 600;
+}
+
+.text-gray-600 {
+  color: #6b7280;
+}
+
+.text-gray-800 {
+  color: #1f2937;
+}
+
+/* ---------- Map Placeholder ---------- */
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.h-56 {
+  height: 14rem;
+}
+
+.bg-gray-200 {
+  background: linear-gradient(135deg, #e5e7eb, #f3f4f6);
+}
+
+.rounded-lg {
+  border-radius: 14px;
+}
+
+.text-gray-500 {
+  color: #6b7280;
+}
+
+.bg-gray-200 {
+  box-shadow: inset 0 0 0 1px #e5e7eb;
+  font-weight: 500;
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.grid > div {
+  animation: fadeSlideUp 0.6s ease forwards;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .md\:grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+}
+
+/* =========================
+   Login Page – AgroCart
+========================= */
+
+.login-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f9fafb, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------- Left Info Panel ---------- */
+.login-info {
+  background: linear-gradient(135deg, #2e7d32, #1b5e20);
+  color: white;
+  padding: 50px;
+}
+
+.login-info h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.login-info p {
+  color: #d1fae5;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.login-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.login-info li {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+/* ---------- Login Card ---------- */
+.login-card {
+  padding: 50px 40px;
+}
+
+.login-card h3 {
+  font-size: 28px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.login-subtitle {
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+/* ---------- Form ---------- */
+.login-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
+}
+
+/* ---------- Options ---------- */
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.login-options a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-options a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Button ---------- */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #27672a;
+}
+
+/* ---------- Signup Text ---------- */
+.signup-text {
+  margin-top: 25px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.signup-text span {
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.signup-text span:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .login-container {
+    grid-template-columns: 1fr;
+  }
+
+  .login-info {
+    display: none;
+  }
+}
+/* =========================
+   Register Page – AgroCart
+========================= */
+
+.register-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f9fafb, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.register-container {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* Left Panel */
+.register-info {
+  background: linear-gradient(135deg, #2e7d32, #1b5e20);
+  color: white;
+  padding: 50px;
+}
+
+.register-info h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.register-info p {
+  color: #d1fae5;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.register-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.register-info li {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+/* Form Card */
+.register-card {
+  padding: 45px 40px;
+}
+
+.register-card h3 {
+  font-size: 28px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.register-subtitle {
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+/* Form Layout */
+.register-form .form-group {
+  margin-bottom: 18px;
+}
+
+.form-row {
+  gap: 15px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.register-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  transition: 0.3s;
+}
+
+.register-form input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
+}
+
+/* Button */
+.register-btn {
+  width: 100%;
+  padding: 13px;
+  margin-top: 10px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  background-color: #27672a;
+}
+
+/* Login Link */
+.login-text {
+  margin-top: 25px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.login-text a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .register-container {
+    grid-template-columns: 1fr;
+  }
+
+  .register-info {
+    display: none;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}
+.signup-text a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+
