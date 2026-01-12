@@ -1,8 +1,19 @@
-import React from 'react';
-import HomePage from './pages/HomePage';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import Contact from "./pages/contact";
+import Header from "./components/Header";
 
 function App() {
-  return <HomePage />;
+  return (
+    <>
+      
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;
