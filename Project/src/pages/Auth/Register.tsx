@@ -1,68 +1,85 @@
-import React from "react";
+import React, { useState } from "react";
 import '../../index.css';
+import { useNavigate } from "react-router-dom";
+import { registerUser } from "../../Service/RegisterApi";
 
 const Register: React.FC = () => {
+  const navigate = useNavigate();
+
+  const [form, setForm] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    password: "",
+    confirmPassword: ""
+  });
+
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e: any) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    setError("");
+
+    if (form.password !== form.confirmPassword) {
+      setError("Passwords do not match");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      await registerUser({
+        fullName: form.fullName,
+        email: form.email,
+        phone: form.phone,
+        password: form.password
+      });
+
+      alert("Registration successful ✅");
+
+      // ✅ Redirect to Login page
+      navigate("/login");
+
+    } catch (err: any) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="register-page">
       <div className="register-container">
 
-        {/* Left Info Panel */}
         <div className="register-info">
           <h2>Join AgroCart 🌾</h2>
-          <p>
-            Create an account to access wholesale prices, bulk ordering,
-            and fast delivery for your business.
-          </p>
-
-          <ul>
-            <li>✔ Best wholesale pricing</li>
-            <li>✔ Reliable supply chain</li>
-            <li>✔ Dedicated business support</li>
-          </ul>
         </div>
 
-        {/* Right Form Panel */}
         <div className="register-card">
           <h3>Create Account</h3>
-          <p className="register-subtitle">
-            Register your business to get started
-          </p>
 
-          <form className="register-form">
+          {error && <p style={{ color: "red" }}>{error}</p>}
 
-            <div className="form-row">
-              <div className="form-group">
-                <label>Full Name</label>
-                <input type="text" placeholder="Owner / Manager Name" />
-              </div>
-            </div>
+          <form className="register-form" onSubmit={handleSubmit}>
 
-            <div className="form-group">
-              <label>Email Address</label>
-              <input type="email" placeholder="business@email.com" />
-            </div>
+            <input name="fullName" placeholder="Full Name" onChange={handleChange} required />
+            <input name="email" type="email" placeholder="Email" onChange={handleChange} required />
+            <input name="phone" placeholder="Phone" onChange={handleChange} required />
+            <input name="password" type="password" placeholder="Password" onChange={handleChange} required />
+            <input name="confirmPassword" type="password" placeholder="Confirm Password" onChange={handleChange} required />
 
-            <div className="form-group">
-              <label>Phone Number</label>
-              <input type="tel" placeholder="+91 98765 43210" />
-            </div>
+            <button className="register-btn" disabled={loading}>
+              {loading ? "Registering..." : "Register"}
+            </button>
 
-            <div className="form-row">
-              <div className="form-group">
-                <label>Password</label>
-                <input type="password" placeholder="Create password" />
-              </div>
-
-              <div className="form-group">
-                <label>Confirm Password</label>
-                <input type="password" placeholder="Confirm password" />
-              </div>
-            </div>
-
-            <button className="register-btn">Register</button>
           </form>
 
-          <p className="login-text">
+          <p>
             Already have an account? <a href="/login">Login</a>
           </p>
         </div>
